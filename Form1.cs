@@ -24,6 +24,9 @@ namespace WinForms231231_grafikaGDI
             //stworzenie pióra
             Pen penZielony10 = new Pen(Color.Green, 10);
 
+            //stworzenie forntu
+            Font font1 = new Font("Arial", 20, FontStyle.Bold);
+
             //przygotowuje punkty
             Point p1=new Point(10, 10);
             Point p2=new Point(50, 10);
@@ -41,10 +44,17 @@ namespace WinForms231231_grafikaGDI
 
             //elipsa
             gPaint.DrawEllipse(penZielony10, 300,300, 200, 100 );
+            //wypelniona elipsa
+            gPaint.FillEllipse(bBlue,300,100,100,50);
+
 
             //prostok¹t
             gPaint.DrawRectangle(penZielony10, 300, 500, 100, 50);
+            //wypelniony prostokat
+            gPaint.FillRectangle(bBlue, 10, 10, 50, 70);
 
+            //tworzenie napisu
+            gPaint.DrawString("Ala ma kota", font1, bBlue, 90, 20);
         }
     }
 }
